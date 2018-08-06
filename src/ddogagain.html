@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ddog(ddog.com)</title>
+        <style>
+*{
+    background-color:rgb(245,245,245)
+}
+
+            #up {
+    list-style-type: none;
+    margin-right: 50;
+    padding-right:50 ;
+    background-color: rgb(242, 242, 242);
+    z-index: -2;
+    font-size:5px;
+    height:-5px;
+}
+
+.ups {
+    float: right;
+}
+
+.ups a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ups a:hover {
+    color:red
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.box{
+    display:flex;
+    flex-direction:row;
+}
+
+#i1{
+    position:absolute;
+    left:130px;
+    top:45px;
+    height: 150px;
+    width:200px;
+    background-color:brown;
+    z-index:-1
+}
+
+#search1{
+    position:absolute;
+    left:600px;
+    top:90px;
+    height:30px;
+    width:400px;
+    border-style: solid;
+    text-align:left;
+    border-color:red;
+    border-width: 1px;
+    z-index: -1
+}
+
+#search2{
+    position:relative;
+    left:670px;
+    top:85px
+}
+
+#search3{
+    position:relative;
+    left:250px;
+    top:25px;
+    color:red;
+    font-size:24px
+}
+
+#search-navi{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    top: 90px;
+    left:250px;
+    width:580px;
+    font-size:10px;
+    height: 30px;
+    z-index: -2
+}
+
+.search-navis {
+    float: left;
+}
+ 
+.search-navis a {
+    display: block;
+    color:rgb(131, 131, 131);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right-style: solid;
+    background: white
+}
+
+.search-navis:last-child{
+    border-right: none;
+}
+
+.hr{
+    color:red;
+}
+
+#classic{
+    position: absolute;
+    left:130px;
+    top:176px;
+    height:500px;
+    width:200px;
+    border-style: solid;
+    border-color:lightgray;
+    border-width: 1px;
+    background-color: rgba(48, 45, 45, 0.199)
+}
+
+#ad1{
+    position:absolute;
+    left:0px;
+    top:200px;
+    height:497px;
+    width:100%;
+    border-top-style:solid;
+    border-color:red;
+    border-top-width:3px;
+    border-bottom-color:black;
+    border-bottom-width:1px;
+    border-bottom-style: solid;
+    text-align:center;
+    font-size:48px;
+    z-index:-2;
+    background-color: rgb(232, 232, 232)
+}
+
+#ad2{
+    position: absolute;
+    left:350px;
+    top:175px;
+    height:25px;
+    width:1000px;
+    text-align: center;
+    z-index:-1;
+    background-color: white
+}
+
+#ad3{
+    position:fixed;
+    left:1490px;
+    top:0px;
+    height:100%;
+    width:50px;
+    background-color: #111;
+    color:white;
+    z-index: 2
+}
+
+#ad5{
+    position:relative;
+    left:0px;
+    top:200px;
+    height:200px;
+    width:200px;
+    background-color:purple;
+    color:white
+}
+
+#ad6{
+    position:relative;
+    left:250px;
+    height:200px;
+    top:-100px;
+    width:700px;
+    background-color:pink;
+    color:white
+}
+
+#ad7{
+    position:relative;
+    left:750px;
+    height:200px;
+    top:-50px;
+    width:200px;
+    background-color:grey
+}
+
+.box{
+    position:relative;
+    left:-1000px;
+    top:150px;
+    height:80px;
+    width: 1300px;
+    background-color:rgb(98, 85, 99);
+    color:white;
+    font-size:10px;
+    text-align:center
+}
+
+#classicl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.classicls a {
+    display: block;
+    color:white;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #111;
+    width:167px;
+    opacity:0.6;
+    line-height:15.2px;
+}
+
+.classicls a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.classicls a:hover:not(.active) {
+    background-color:white;
+    color: red;
+}
+
+#classic-h{
+    background-color: red;
+    line-height: 25px
+}
+
+#hhh {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white
+}
+
+.hhhs {
+    float: left;
+    border-right:1px solid #bbb;
+    text-decoration: none;
+    color:black;
+    background-color: white
+}
+
+.hhhs:last-child {
+    border-right: none;
+}
+
+.hhhs a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.hhhs a:hover:not(.active) {
+    background-color: #111;
+    color:red;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+#upper{
+    background:white;
+    position:absolute;
+    top:0;
+    left:0;
+    height:700px;
+    width:100%;
+    z-index: -3;
+}
+
+#ad4{
+    position:absolute;
+    left:130px;
+    top:750px;
+    height:370px;
+    width:1300px;
+    background-color:white;
+    text-align: center;
+    font-size:24px;
+    display: flex;
+}
+
+.ads4{
+    display:flex;
+    background-color:white;
+}
+
+.ad4s1{
+    flex:1;
+    border-right-style:solid;
+    border-right-width: 20px;
+    border-right-color: rgb(242, 242, 242);
+    background-color:white;
+    text-align: left;
+    font-size: 20px;
+}
+
+.ad4s2{
+    flex:2;
+    background-color:white;
+    text-align: left;
+    font-size: 20px;
+}
+
+#ju{
+    border-right-style:solid;
+    border-right-width: 20px;
+    border-right-color: rgb(242, 242, 242);
+}
+
+#img1{
+    float:right;
+    text-decoration: none;
+}
+
+.adaa{
+    float: bottom;
+    width:100%;
+    height: 316px;
+    position: relative;
+    top:30px;
+}
+
+.imga:hover{
+    opacity:0.6
+}
+
+.miji {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 270px;
+  position: absolute;
+  left:130px;
+  top:1150px;
+  width:1300px;
+}
+
+.mijis {
+  flex: 1;
+  background-color:white;
+  border-style: solid;
+  border-color: rgb(242, 242, 242);
+  border-width: 0.4px;
+  display:flex;
+}
+
+.mijiss{
+    flex:1;
+  border-style: solid;
+  border-color: rgb(242, 242, 242);
+  background-color:white;
+  border-width: 0.4px;
+}
+
+#mijis-w{
+    opacity:0;
+    background-color: #111;
+    color:white;
+    transition:opacity 0.5s;
+    position: relative;
+    left:px;
+    top:-90px;
+    width:50px;
+    height:90px;
+    text-align: center;
+}
+
+.mijiss:hover #mijis-w{
+    opacity:0.6
+}
+
+
+.tmallsuper-navi {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top:1440px;
+    left:110px;
+    width:1300px;
+}
+
+.tmallsuper-navis {
+    float: right;
+}
+
+.tmallsuper-navis a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.tmallsuper-navis a:hover:not(.active) {
+    border-bottom-style: solid;
+}
+
+.s-c{
+    position: absolute;
+    top: 1500px;
+    left: 130px;
+    width:1300px;
+    height:618px;
+    display: flex;
+    background-color: white;
+}
+
+.s-cs1{
+    flex:1;
+    background-color: white;
+    border-right-style: solid;
+    border-right-width:10px;
+    border-right-color: rgb(232, 232, 232)
+}
+
+.s-cs1:hover{
+    opacity: 0.6;
+}
+
+.s-cs2{
+    flex:2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.s-cs2s{
+    flex:1;
+    background-color:white;
+    display:flex;
+}
+
+.s-cs22{
+    display:flex;
+}
+
+.s-cs22s{
+    flex:1;
+    background-color:white;
+}
+
+#wei:hover{
+    border-style: solid;
+    border-color: red;
+    opacity: 0.6;
+}
+
+#qingyang:hover{
+    border-style: solid;
+    border-color: red;
+    opacity: 0.6;
+}
+
+.tmall-hk {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    top:2140px;
+    left:110px;
+    width:1300px;
+}
+
+.s-c1{
+    position: absolute;
+    top: 2200px;
+    left: 130px;
+    width:1300px;
+    height:618px;
+    display: flex;
+    background-color: white;
+}
+
+.s-cs11{
+    flex:1;
+    background-color: white;
+    border-right-style: solid;
+    border-right-width:10px;
+    border-right-color: rgb(232, 232, 232);
+    display: flex;
+    flex-direction: column
+}
+
+.tms:hover{
+    opacity: 0.6;
+}
+
+.tms{
+    flex:1;
+}
+
+.s-cs2s-1{
+    flex:1;
+    background-color:white;
+    display:flex;
+}
+
+#caini{
+    position: absolute;
+    left:680px;
+    top:2850px;
+}
+
+.caini-c{
+    position: absolute;
+    top:2900px;
+    left:130px;
+    width:1300px;
+    height:2040px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.caini-cy{
+    background-color: white;
+    flex:1;
+    display:flex;
+
+}
+
+.caini-cx{
+    flex:1;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(245,245,245);
+    background-color: white;
+}
+
+.caini-cx:hover{
+    border-color:red;
+    border-width:3px;
+}
+
+.caini-cx a{
+    text-decoration: none;
+}
+
+#end{
+    position: absolute;
+    left:720px;
+    top:4950px;
+}
+
+#white-h{
+    position: absolute;
+    left:150px;
+    top:5035px;
+    height:130px;
+    width:1250px;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(242, 242, 242);
+    border-bottom-width:1px;
+    z-index: 1
+}
+
+#white{
+    position: absolute;
+    top:5030px;
+    width:100%;
+    border-top-style: solid;
+    border-top-color: rgb(131, 131, 131);
+    border-top-width: 1px;
+    height:550px;
+    background-color: white
+}
+
+#liangxin{
+    position: absolute;
+    left:0px;
+    top:20px;
+}
+
+#white-g{
+    position: absolute;
+    left:130px;
+    top:150px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color:rgb(100, 100, 100);
+    display: flex;
+    width:1300px;
+}
+
+.wgs{
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color:rgb(100, 100, 100);
+    flex:1
+}
+
+.wgus{
+    text-decoration: none;
+    display: inline-block;
+    background-color: white;
+    color:rgb(139, 139, 139);
+    font-size:10px;
+}
+
+#ends{
+    position: absolute;
+    left:-10px;
+    top:370px;
+    background-color: black;
+    height: 200.2px;
+    width: 100%;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: red;
+    z-index:2
+}
+
+#tma{
+    position: absolute;
+    left:150px;
+    top: 340px;
+    z-index: 1
+}
+        </style>
+    </head>
+
+    <body>
+        <div id='upper'></div>
+        <ul id="up" style="background-color: rgb(242, 242, 242)">
+            <li class='ups' style="float:left"><a href="#">汪，欢迎来地狗</a></li>
+            <li class='ups' style="float:left"><a href="#">请登陆  </a></li>
+            <li class='ups' style="float:left"><a href="#">免费注册</a></li>
+            <li class='ups'><div class="dropdown">
+                <a href="#" class="dropbth">网站导航</a>
+                <div class="dropdown-content">
+                    <div>服务指南Help</div>
+                    <a href="#">帮助中心  </a>
+                    <a href="#">品质保障  </a>
+                    <a href="#">特色服务  </a>
+                    <a href="#">七天退换货  </a>
+                </div>
+            </li>
+            <li class='ups'><div class="dropdown">
+                <a href="#" class="dropbth">商家支持</a>
+                <div class="dropdown-content">
+                    <div style="border-bottom-style:dotted;border-bottom-width:1px"><p style="font-weight:800">商家：</p>
+                    <a href="#">商家中心  </a>
+                    <a href="#">地狗规则</a><br>
+                    <a href="#">商家入驻  </a>
+                    <a href="#">运营服务</a><br>
+                    <a href="#">随便是啥  </a>
+                    <a href="#">懒得看了</a><br>
+                    <a href="#">就这样吧  </a>
+                    <a href="#">够数算逑</a><br></div>
+                    <div style="border-bottom-style:dotted;border-bottom-width:1px">
+                        <p style="font-weight:800">帮助：</p>
+                        <span><a href="#">帮助中心</a></span>
+                        <span><a href="#">问商友</a></span><br>
+                    </div>
+                </div>
+            </li>
+            <li class='ups'><a href="#">天猫网</li>
+            <li class='ups'><a href="#" class="dropbth" >手机版</a>
+                <div class="dropdown" >
+                <div class="dropdown-content">
+                <img  alt="Trolltunga Norway" width="100" height="50">
+                <p class="desc">到天猫APP<br>新人领388元大礼包</p></div>
+            </div></li>
+            <li class='ups'><div class="dropdown"><a href="#" class="dropbth" style="border-right-style: solid;border-right-color: black">收藏夹</a>
+                <div class="dropdown-content">
+                <p><a href="#">收藏的宝贝</a></p>
+                <p><a href="#">收藏的店铺</a></p></div>
+            </div></li>
+            <li class='ups'><a href="#">购物车</a></li>
+            <li class='ups'><div class="dropdown"><a href="#" class="dropbth">我的淘宝</a>
+                <div class="dropdown-content">
+                <p><a href="#">已买到的宝贝</a></p>
+                <p><a href="#">已卖出的宝贝</a></p></div></div></li>
+            
+        </ul>
+
+        <div id="i1" >
+            <img src="./img/p1.png" height="130" width="200">
+        </div>
+
+        <div><input id="search1">
+            <div><button type="submit"  id="search2" item-width="100" item-height="50">搜索<s></s></button></div></div>
+            <div>
+                <ul id="search-navi">
+                    <li class='search-navis'><a href='#'>针织衫</a></li>
+                    <li class='search-navis' class='hr'><a href='#'>连衣裙</a></li>
+                    <li class='search-navis'><a href='#'>四件套</a></li>
+                    <li class='search-navis' class='hr'><a href='#'>摄像头</a></li>
+                    <li class='search-navis'><a href='#'>客厅灯</a></li>
+                    <li class='search-navis'><a href='#'>手机</a></li>
+                    <li class='search-navis' class='hr'><a href='#'>口红</a></li>
+                    <li class='search-navis'><a href='#'>运动鞋</a></li>
+                    <li class='search-navis' class='hr' id='last'><a href='#'>牛奶</a></li>
+                </ul>
+            </div>
+
+        <div  id='classic'>
+                <ul id='classicl'><div id='classic-h'>商品分类</div>
+                        <li class='classicls'><a href="#">女装/内衣</a></li>
+                        <li class='classicls'><a href="#">男装/运动户外</a></li>
+                        <li class='classicls'><a href="#">女鞋/男鞋/箱包</a></li>
+                        <li class='classicls'><a href="#">美妆/个人护理</a></li>
+                        <li class='classicls'><a href="#">腕表/眼镜/珠宝饰品</a></li>
+                        <li class='classicls'><a href="#">手机/数码/电脑办公</a></li>
+                        <li class='classicls'><a href="#">母婴玩具</a></li>
+                        <li class='classicls'><a href="#">零食/茶酒/进口食品</a></li>
+                        <li class='classicls'><a href="#">生鲜水果</a></li>
+                        <li class='classicls'><a href="#">大家电/生活电器</a></li>
+                        <li class='classicls'><a href="#">家具建材</a></li>
+                        <li class='classicls'><a href="#">汽车/配件/用品</a></li>
+                        <li class='classicls'><a href="#">家纺/家饰/鲜花</a></li>
+                        <li class='classicls'><a href="#">医药保健</a></li>
+                        <li class='classicls'><a href="#">厨具/收纳/宠物</a></li>
+                        <li class='classicls'><a href="#">图书音像</a></li>
+                      </ul>
+        </div>
+
+        <div id='ad1'><img src="bob_dylan.jpg" height='497px' width='100%'></div>
+
+        <div id='ad2'>
+            <ul id="hhh">
+                    <li><a href="#" class="hhhs"><img src="./img/天猫超市.png" height="20">&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs"><img src="./img/天猫国际.png" height="20">&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">天猫会员&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">电器城&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">喵鲜生&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">医药馆&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">营业厅&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">魅力惠&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">飞猪旅行&nbsp;&nbsp;</a></li>
+                    <li><a href="#" class="hhhs">苏宁易购&nbsp;&nbsp;</a></li>
+            </ul>
+        </div>
+
+        <div id='ad3'></div>
+
+        <div class="ads4" id="ad4">
+                <div class="ad4s1">品牌闪购  BRAND SALE      &nbsp; 
+                    <a href="#ad4"><img src="./img/more.png" height="20"></a> 
+                    <a href="#ad4" class='imga'><img src='./img/pinpai.png' height="316" class='adaa'></a>
+                </div>
+                <div class="ad4s2" id='ju'>聚名品  LUXURY CHANNEL
+                    <span id='img1'><a href="#ad4"><img src="./img/more1.png" height="20"></a></span>
+                    <a href="#ad4" class='imga'><img src='./img/jum.png' height="316" class='adaa'></a>
+                </div>
+                <div class="ad4s2">品牌活动 BRAND ACTIVITY
+                    <span id='img1'><a href="#ad4"><img src="./img/more1.png" height="20"></a></span>
+                    <a href="#ad4" class='imga'><img src='./img/huo.png' height="316" class='adaa'></a>
+                </div>
+        </div> 
+        
+        <div class="miji">
+                <div class="mijis">
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                </div>
+                <div class="mijis">
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                </div>
+                <div class="mijis">
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                    <div class='mijiss'><img src="./img/hhhhhh.jpeg" width="100%" height="100%">
+                        <div id='mijis-s'><a href"#" id='mijis-w'>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法<br>老师冷静杀人犯法</a></div>
+                    </div>
+                </div>
+              </div>
+
+              <div class='tmallsupermarkert'>
+                    <ul class='tmallsuper-navi'>
+                            <li style="float:left" class='tmallsuper-navis'><a href="#"><img src='./img/超市.png'></a></li>
+                            <li class='tmallsuper-navis'><a href="#">进口食品</a></li>
+                            <li class='tmallsuper-navis'><a href="#">食品饮料</a></li>
+                            <li class='tmallsuper-navis'><a href="#">粮油副食</a></li>
+                            <li class='tmallsuper-navis'><a href="#">美容洗护</a></li>
+                            <li class='tmallsuper-navis'><a href="#">家具家电</a></li>
+                            <li class='tmallsuper-navis'><a href="#">家庭清洁</a></li>
+                            <li class='tmallsuper-navis'><a href="#">母婴用品</a></li>
+                            <li class='tmallsuper-navis'><a href="#">生鲜水果</a></li>
+                          </ul>
+                    <div class='s-c'>
+                        <div class='s-cs1' style="border-right-style: solid;
+                        border-right-width:10px;
+                        border-right-color: rgb(245,245,245)">
+                                <img src='./img/dazhaxie.png' width="260px" height="100%">
+                        </div>
+                        <div class='s-cs2' style="border-right-style: solid;
+                        border-right-width:10px;
+                        border-right-color: rgb(245,245,245)">
+                              <div class='s-cs2s' style="    border-bottom-style: solid;
+                                                             border-bottom-color: rgb(245,245,245);
+                                                             border-bottom-width: 10px;
+                                                             display:flex;">
+                                 <a href='#'><img id='jinri' src="./img/jinri.png" width="570px" height="302px"></a>
+                              </div>
+                                 <div class='s-cs2s' class='s-cs22'>
+                                    <div class='s-cs22s' style="  border-right-style: solid;
+                                                              border-right-color: rgb(245,245,245);
+                                                              border-right-width: 10px;
+                                                              flex:1">
+                                            <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="302px"></a>
+                                    </div>
+                                    <div class='s-cs22s' style="flex:1">
+                                            <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="302px"></a>
+                                    </div>
+                                 </div>
+                        </div>
+                        <div class='s-cs2'>
+                            <div class='s-cs2s'  style="    border-bottom-style: solid;
+                                                            border-bottom-color: rgb(245,245,245);
+                                                            border-bottom-width: 10px;
+                                                            display:flex;">
+                                                            <div class='s-cs22s' style="  border-right-style: solid;
+                                                            border-right-color: rgb(245,245,245);
+                                                            border-right-width: 10px;
+                                                            flex:1">
+                                          <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="302px"></a>
+                                  </div>
+                                  <div class='s-cs22s' style="flex:1">
+                                          <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="302px"></a>
+                                  </div>
+                            </div>
+                            <div class='s-cs2s'  style="    border-bottom-style: solid;
+                                                            border-bottom-color: rgb(245,245,245);
+                                                            border-bottom-width: 10px;
+                                                            display:flex;">
+                                                            <div class='s-cs22s' style="  border-right-style: solid;
+                                                            border-right-color: rgb(245,245,245);
+                                                            border-right-width: 10px;
+                                                            flex:1">
+                                          <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="312px"></a>
+                                  </div>
+                                  <div class='s-cs22s' style="flex:1">
+                                          <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="312px"></a>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+              <div class='tma'>
+                    <ul class='tmall-hk'>
+                            <li style="float:left" class='tmallsuper-navis'><a href="#"><img src='./img/guoji.png'></a></li>
+                            <li class='tmallsuper-navis'><a href="#">口红</a></li>
+                            <li class='tmallsuper-navis'><a href="#">YSL</a></li>
+                            <li class='tmallsuper-navis'><a href="#">面膜</a></li>
+                            <li class='tmallsuper-navis'><a href="#">防晒</a></li>
+                            <li class='tmallsuper-navis'><a href="#">迪奥</a></li>
+                          </ul>
+                    <div class='s-c1'>
+                        <div class='s-cs11' style="border-right-style: solid;
+                        border-right-width:10px;
+                        border-right-color: rgb(245,245,245)">
+                                <div class='tms' ><img src='./img/chunse.png' width="260px" height="300px"></div>
+                                <div class='tms' style="border-top-style: solid;border-top-color: rgb(245,245,245);border-top-width: 10px"><img src='wenhe.png' width="260px" height="310px"></div>
+                        </div>
+                        <div class='s-cs2' style="border-right-style: solid;
+                        border-right-width:10px;
+                        border-right-color: rgb(245,245,245)">
+                              <div class='s-cs2s' style="    border-bottom-style: solid;
+                                                             border-bottom-color: rgb(245,245,245);
+                                                             border-bottom-width: 10px;
+                                                             display:flex;">
+                                                             <div class='s-cs22s' style="  border-right-style: solid;
+                                                             border-right-color: rgb(245,245,245);
+                                                             border-right-width: 10px;
+                                                             flex:1">
+                                           <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="302px"></a>
+                                   </div>
+                                   <div class='s-cs22s' style="flex:1">
+                                           <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="302px"></a>
+                                   </div>
+                              </div>
+                                 <div class='s-cs2s' class='s-cs22'>
+                                    <div class='s-cs22s' style="  border-right-style: solid;
+                                                              border-right-color: rgb(245,245,245);
+                                                              border-right-width: 10px;
+                                                              flex:1">
+                                            <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="302px"></a>
+                                    </div>
+                                    <div class='s-cs22s' style="flex:1">
+                                            <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="302px"></a>
+                                    </div>
+                                 </div>
+                        </div>
+                        <div class='s-cs2'>
+                            <div class='s-cs2s'  style="    border-bottom-style: solid;
+                                                            border-bottom-color: rgb(245,245,245);
+                                                            border-bottom-width: 10px;
+                                                            display:flex;">
+                                                            <div class='s-cs22s' style="  border-right-style: solid;
+                                                            border-right-color: rgb(245,245,245);
+                                                            border-right-width: 10px;
+                                                            flex:1">
+                                          <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="302px"></a>
+                                  </div>
+                                  <div class='s-cs22s' style="flex:1">
+                                          <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="302px"></a>
+                                  </div>
+                            </div>
+                            <div class='s-cs2s'  style="    border-bottom-style: solid;
+                                                            border-bottom-color: rgb(245,245,245);
+                                                            border-bottom-width: 10px;
+                                                            display:flex;">
+                                                            <div class='s-cs22s' style="  border-right-style: solid;
+                                                            border-right-color: rgb(245,245,245);
+                                                            border-right-width: 10px;
+                                                            flex:1">
+                                          <a href="#wei" ><img id='wei'src="./img/weilushi.png" width="236px" height="312px"></a>
+                                  </div>
+                                  <div class='s-cs22s' style="flex:1">
+                                          <a href="#qingyang" ><img id='qingyang'src="./img/qingyang.png" width="236px" height="312px"></a>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+        <div id='caini'><img src="./img/caini.png"></div>
+
+        <div class='caini-c'>
+            <div class='caini-cy'>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+            </div>
+            <div class='caini-cy'>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+            </div>
+            <div class='caini-cy'>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+            </div>
+            <div class='caini-cy'>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+            </div>
+            <div class='caini-cy'>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+                <div class="caini-cx"><a href="#caini">懒得找图了</a></div>
+            </div>
+        </div>
+
+        <div id='end'><img src="./img/end.png"></div>
+
+        <div id='white-h'><a href="#liangxin"><img src='./img/liangxin.png' width="1250px" id='liangxin'></a></div>
+
+        <div id='white'>
+            <ul id='white-g'>
+                <li class="wgs"><b>购物指南</b><br>
+                    <br>
+                    <a href='wgu1' class='wgus'>免费注册</a><br>
+                    <a href='wgu1' class='wgus'>开通支付宝</a><br>
+                    <a href='wgu1' class='wgus'>支付宝充值</a>
+                </li>
+                <li class="wgs"><b>天猫保障</b><br>
+                    <br>
+                    <a href='wgu1' class='wgus'>发票保障</a><br>
+                    <a href='wgu1' class='wgus'>售后规则</a><br>
+                    <a href='wgu1' class='wgus'>缺货赔付</a>
+                </li>
+                <li class="wgs"><b>支付方式</b><br>
+                    <br>
+                    <a href='wgu1' class='wgus'>快捷支付</a><br>
+                    <a href='wgu1' class='wgus'>信用卡</a><br>
+                    <a href='wgu1' class='wgus'>缺货赔付</a><br>
+                    <a href='wgu1' class='wgus'>售后规则</a><br>
+                    <a href='wgu1' class='wgus'>缺货赔付</a>
+                </li>
+                <li class="wgs"><b>商家服务</b><br>
+                    <br>
+                    <a href='wgu1' class='wgus'>天猫规则</a><br>
+                    <a href='wgu1' class='wgus'>商家入驻</a><br>
+                    <a href='wgu1' class='wgus'>商家中心</a><br>
+                    <a href='wgu1' class='wgus'>天猫智库</a><br>
+                    <a href='wgu1' class='wgus'>物流服务</a><br>
+                    <a href='wgu1' class='wgus'>喵言喵语</a><br>
+                    <a href='wgu1' class='wgus'>运营服务</a><br>
+                </li>
+                <li class="wgs"><b>手机天猫</b><br>
+                    &nbsp;<br>
+                    <a href='wgu1' class='wgus'><img src="./img/erwei.png" height="110px" width="110px"</a><br>
+                </li>
+            </ul>
+            
+            <div id='ends'></div>
+
+            <div id='tma'><img src="./img/tma.png" width="90"></div>
+    </body>
+
+</html>
